@@ -17,7 +17,7 @@ export default {
     },
     methods: {
       getImageUrl(name: String) {
-        return new URL(`../assets/imagens/icones/categorias_ingredientes/${name}`, import.meta.url)
+        return new URL(`/public/imagens/icones/categorias_ingredientes/${name}`, import.meta.url)
       }
     },
     emits: ['adicionarIngrediente', 'removerIngrediente']

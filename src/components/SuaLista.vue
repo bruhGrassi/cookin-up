@@ -27,7 +27,7 @@ export default {
             </li>
         </ul>
         <p v-else class="paragrafo lista-vazia">
-            <img src="../assets/imagens/Empty-state.png" alt="Ícone de pesquisa">
+            <img src="/public/imagens/Empty-state.png" alt="Ícone de pesquisa">
             Sua lista está vazia, selecione ingredientes para iniciar.
         </p>
     </section>

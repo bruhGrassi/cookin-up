@@ -19,8 +19,8 @@ export default {
     },
     methods: {
       getImageUrl(name: String) {
-        const url = new URL(`../assets/imagens/cards_receitas/${name}`, import.meta.url);
-        const semImagem =  new URL(`../assets/imagens/noimage.png`, import.meta.url);
+        const url = new URL(`/public/imagens/cards_receitas/${name}`, import.meta.url);
+        const semImagem =  new URL(`/public/imagens/noimage.png`, import.meta.url);
         return url.pathname === "/undefined" ? semImagem : url
       }
     },

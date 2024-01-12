@@ -55,7 +55,7 @@ export default {
 
         <div class="sem-resultado" v-else>
             <p class="paragrafo">Ops, não encontramos resultados para sua combinação. Vamos tentar de novo?</p>
-            <img src="../assets/imagens/Empty-state.png" alt="Desenho de um ovo quebrado. A gema tem um rosto com uma expressão triste.">
+            <img src="/public/imagens/Empty-state.png" alt="Desenho de um ovo quebrado. A gema tem um rosto com uma expressão triste.">
         </div>
 
         <BotaoPrincipal :texto="'Editar lista'" @click="$emit('editarReceitas')" />
