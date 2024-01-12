@@ -1,7 +1,7 @@
 <script lang="ts">
 import Tag from './Tag.vue';
 import type { PropType } from 'vue';
-import ICategoria from '@/interfaces/ICategoria';
+import type ICategoria from '../interfaces/ICategoria';
 import IngredienteSelecionavel from './IngredienteSelecionavel.vue';
 
 export default {
@@ -15,11 +15,6 @@ export default {
         Tag,
         IngredienteSelecionavel,
     },
-    methods: {
-      getImageUrl(name: String) {
-        return new URL(`/public/imagens/icones/categorias_ingredientes/${name}`, import.meta.url)
-      }
-    },
     emits: ['adicionarIngrediente', 'removerIngrediente']
   }
 </script>
@@ -27,7 +22,7 @@ export default {
 <template>
     <article class="categoria">
       <header class="categoria__cabecalho">
-          <img :src="getImageUrl(categoria.imagem)" alt="" class="categoria__imagem">
+          <img :src="`/public/imagens/icones/categorias_ingredientes/${categoria.imagem}`" alt="" class="categoria__imagem">
           <h2 class="paragrafo-lg categoria__nome">{{ categoria.nome }}</h2>
         </header>
         

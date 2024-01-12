@@ -1,7 +1,7 @@
 <script lang="ts">
 import Tag from './Tag.vue';
 import type { PropType } from 'vue';
-import IReceita from '@/interfaces/IReceita';
+import type IReceita from '../interfaces/IReceita';
 
 export default {
     props: {
@@ -17,13 +17,6 @@ export default {
     components: {
         Tag,
     },
-    methods: {
-      getImageUrl(name: String) {
-        const url = new URL(`/public/imagens/cards_receitas/${name}`, import.meta.url);
-        const semImagem =  new URL(`/public/imagens/noimage.png`, import.meta.url);
-        return url.pathname === "/undefined" ? semImagem : url
-      }
-    },
     emits: ['adicionarIngrediente', 'removerIngrediente']
   }
 </script>
@@ -31,7 +24,7 @@ export default {
 <template>
     <article class="card">
       <header class="categoria__cabecalho">
-          <img :src="getImageUrl(receita.imagem)" alt="" class="categoria__imagem">
+          <img :src="`/public/imagens/cards_receitas/${receita.imagem}`" alt="" class="categoria__imagem">
           <h2 class="paragrafo-lg categoria__nome">{{ receita.nome }}</h2>
 
           <ul class="categoria__ingredientes">
