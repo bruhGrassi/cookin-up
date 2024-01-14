@@ -24,7 +24,7 @@ export default {
 <template>
     <article class="card">
       <header class="categoria__cabecalho">
-          <img :src="`/public/Imagens/cards_receitas/${receita.imagem}`" alt="" class="categoria__imagem">
+          <img :src="`/Imagens/Cards_receitas/${receita.imagem}`" alt="" class="categoria__imagem">
           <h2 class="paragrafo-lg categoria__nome">{{ receita.nome }}</h2>
 
           <ul class="categoria__ingredientes">
